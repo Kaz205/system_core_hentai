@@ -14,8 +14,6 @@
  * limitations under the License.
  */
 
-#if defined(USE_SCUDO)
-
 #include "libdebuggerd/scudo.h"
 #include "libdebuggerd/tombstone.h"
 
@@ -143,5 +141,3 @@ void ScudoCrashData::AddCauseProtos(Tombstone* tombstone,
     FillInCause(tombstone->add_causes(), &error_info_.reports[report_num++], unwinder);
   }
 }
-
-#endif  // USE_SCUDO
